@@ -59,8 +59,8 @@ class QuotesSpider(scrapy.Spider):
 
     def closed(self, reason):
         sorted_user_count = dict(sorted(self.user_count.items(), key=lambda x: x[1], reverse=True))
-        with open('advance.json', 'w', encoding='utf-8') as json_file:  # Указываем кодировку utf-8
-            json.dump(sorted_user_count, json_file, ensure_ascii=False, indent=4)
+        with open('advance.json', 'w', encoding='utf-8') as json_file:
+                        json.dump(sorted_user_count, json_file, ensure_ascii=False, indent=4)
 
 
 
